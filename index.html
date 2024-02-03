@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1 class="title">Password Generator</h1><br><br>
+
+    <div class="centered-div">
+        <label for="length">Password length:</label><br>
+        <input type="range" id="length" value="12" min="5" max="60" oninput="updateSliderValue()"><br>
+        <span id="length-value">12</span>
+        <br><br>
+    
+        <label><input type="checkbox" id="uppercase" checked> Uppercase</label><br>
+        <label><input type="checkbox" id="numbers" checked> Numbers</label><br>
+        <label><input type="checkbox" id="special" checked> Special characters</label>
+        <br><br>
+    
+        <button class="button" onclick="generatePassword()">🔒 Generate</button>
+        <br><br>
+    
+        <h2 id="password-label"></h2><br>
+        <div id="password" onclick="copyToClipboard()"></div><br>
+        <h2 id="clipboard-label"></h2>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 - Made with ❤ by <b><a href="https://github.com/MinethanDev/">Minethan</b></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
